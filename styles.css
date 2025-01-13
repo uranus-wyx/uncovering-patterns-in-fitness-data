@@ -1,0 +1,154 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #FF7A00, #FF7A00, #8E44AD, #8E44AD); /* Updated gradient colors */
+    background-size: 400% 400%; /* Make the gradient bigger to create a moving effect */
+    animation: gradientAnimation 10s ease infinite; /* Apply the animation */
+    color: #011627;
+    position: relative;
+}
+
+/* Animation for background movement */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    background-color: rgba(46, 196, 182, 0.8); /* Semi-transparent background for header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2; /* Ensure content stays above the background */
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(255, 191, 0, 0.7); /* Soft yellow overlay */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #555;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    font-size: 1em;
+    color: white;
+    background-color: #FFBF00;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #e0a800;
+}
+
+/* Section styles */
+.section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    backdrop-filter: blur(5px); /* Optional: Adds a blur effect behind the section */
+}
+
+/* Section titles */
+.section h2 {
+    text-align: center;
+    color: #0e4a44;
+    margin-bottom: 20px;
+}
+
+/* Section text */
+.section p {
+    color: #011627;
+    line-height: 1.6;
+    font-size: 1em;
+    text-align: justify; /* Neat text alignment */
+}
+
+/* Floating menu */
+.floating-menu {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.menu-icon {
+    background-color: #FF7A00;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-items {
+    display: none;
+    flex-direction: column;
+    background-color: #FF7A00;
+    margin-top: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.menu-items a:hover {
+    background-color: #e06a00;
+}
+
+/* Footer */
+footer {
+    background-color: #011627;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3; /* Keep footer above the dynamic background */
+}
